@@ -1156,7 +1156,7 @@ where
                 // No auth configured — dev / fronting-proxy deployments.
                 // Inject a local-dev principal so downstream handlers that
                 // call extract_principal() always find one.
-                unauthenticated_dev_user_principal()
+                Principal::Anonymous
             };
 
             match principal {
